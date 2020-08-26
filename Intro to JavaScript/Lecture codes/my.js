@@ -1,19 +1,18 @@
 prompt = require("prompt-sync")()
 
-let sales = prompt ("Sales in dollar:");
-sales = parseInt(sales);
-let c ;
-
-if (sales < 300){
-  c = 0;
-} 
-else if (sales < 600){
-  c = sales *0.02;
-}
-else if (sales < 1000){
-  c = sales *0.025;
-}
-else 
- c = sales *0.03;
-
- console.log("commission earned is " + c);
+let x = prompt("enter a number upto which prime numbers to be printed: ")
+x = parseInt(x);
+let j= 0;
+  for ( let i = 2 ; i <= x; i++){
+    
+    for (let k = 2 ; k <= i ; k++){
+    if (i % k === 0){
+      j = j + 1;
+    } 
+  
+    }
+    if (j <=2){
+      console.log(i);
+    }
+    j = 0;
+  }

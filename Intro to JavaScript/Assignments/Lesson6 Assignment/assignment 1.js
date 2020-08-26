@@ -1,4 +1,6 @@
-prompt = require("prompt-sync")();
+
+
+const prompt = require("prompt-sync")();
 
 let h = prompt ("enter first number: ");
 let s = prompt ("enter second number: ");
