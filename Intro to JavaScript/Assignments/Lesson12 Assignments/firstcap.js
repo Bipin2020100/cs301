@@ -1,5 +1,5 @@
 "use strict";
-
+//  actually it is not necessary to split beacuse strings are already treated as arrays.
 function titleCase(s) {
   let length = s.length;
   let arr = s.split("");
