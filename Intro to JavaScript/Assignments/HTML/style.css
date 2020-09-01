@@ -1,0 +1,37 @@
+
+h1{
+  color :white ;
+  background-color: black ;
+}
+
+
+h4{
+  color : blue ;
+  background-color: burlywood;
+}
+
+p{
+  color : brown ;
+  background-color : lightblue ;
+}
+h2 {
+  
+  border : 2px dashed yellow;
+  text-shadow: -1px 3px lightblue;
+  }
+
+  #mission {
+    font-style: italic;
+    color: #000000;
+    }
+    .special { /* any element with class="special" */
+    background-color: yellow; font-weight: bold;
+    }
+    p.shout { /* only p elements with class="shout" */
+    color: red;
+    font-family: cursive;
+    }
+    p#mission::first-line{
+      background-color: ora;
+    }
+    
