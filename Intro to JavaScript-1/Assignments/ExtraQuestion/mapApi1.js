@@ -14,9 +14,16 @@ function findSumOfDigits(num){
 function mapper(arr){
  let  brr = [];
  let j = 0;
-    let output = findSumOfDigits(arr[i]);
+ let output ;
+ for (let i = 0 ; i < arr.length ; i++){
+    output = findSumOfDigits(arr[i]);
   brr[j] = output;
   j++;
 }
+return brr;
+}
+let y =[25,3,123,45]
+// let z = y.map(n => findSumOfDigits(n))
+let z = mapper(y)
 
-console.log(mapper[25,3,123,45]);
+console.log(z);
