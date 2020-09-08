@@ -17,15 +17,14 @@ console.log(reverseArray(b));
 
 function reverseArrInPlace(arr) {
   let j = 0;
-  let temp = arr[arr.length - 1];
-  for (let i = arr.length - 1; i >= 0; i--) {
-    temp = arr[j];
+  let temp = [];
+  for (let i = arr.length -1 ; i >= 0; i--) {
+    temp = arr[i];
     arr[j] = arr[i];
-    j++
-
+    j++;
   }
   return arr;
 }
 
-let c = [5, 3, 2, 6];
+let c = [5, 3, 2, 7];
 console.log(reverseArrInPlace(c));
