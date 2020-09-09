@@ -16,12 +16,10 @@ console.log(reverseArray(b));
 
 
 function reverseArrInPlace(arr) {
-  let j = 0;
-  let temp = [];
-  for (let i = arr.length -1 ; i >= 0; i--) {
-    temp = arr[i];
-    arr[j] = arr[i];
-    j++;
+  for (let i = 0 ; i < arr.length /2 ; i++) {
+    let temp = arr[i];
+    arr[i] = arr[arr.length -1 -i];
+    arr[arr.length -1 -i] = temp;
   }
   return arr;
 }
