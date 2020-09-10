@@ -1,13 +1,12 @@
-'use strict';
+"use strict";
 /**
- * 
- * @param {number} a 
- * @param {number} b 
- * @param {number} c 
+ * @param {a} is a number
+ * @param {a} is a number
+ * @param {a} is a number
+ * @returns {number}
  */
 
 function maxOfThree(a,b,c){
-  
   
   if (( a >= b) && (a >= c )){
     return a;
@@ -17,3 +16,5 @@ function maxOfThree(a,b,c){
     return c;
   } 
   }
+
+  alert(maxOfThree(4,5,6));

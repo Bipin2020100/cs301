@@ -1,4 +1,9 @@
-'use strict'
+"use strict" ;
+
+/**
+ * 
+ * @param {arr} is an array of strings. 
+ */
 
 function getMaxSubSum(arr) {
   let maxSum = 0; // if we take no elements, zero will be returned

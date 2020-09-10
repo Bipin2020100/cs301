@@ -1,3 +1,7 @@
+/* eslint-disable require-jsdoc */
+/* eslint-disable strict */
+
+
 function filterLongWords(arr,i){
   let j = 0;
   let output = [];
@@ -9,7 +13,7 @@ function filterLongWords(arr,i){
   }
   return output;
 }
-
+///////////////////////////////////////////////////
 function findLongestWord(arr){
   let length = 0 ;
   let highest = 0;
@@ -21,10 +25,9 @@ function findLongestWord(arr){
   }
   return highest;
 }
-
+////////////////////////////////////////////////////
 
 function maxOfThree(a,b,c){
-  
   
   if (( a >= b) && (a >= c )){
     return a;
@@ -34,6 +37,7 @@ function maxOfThree(a,b,c){
     return c;
   } 
   }
+////////////////////////////////////////////////
 
   function reverseArray(arr) {
     let output = "";
@@ -46,8 +50,8 @@ function maxOfThree(a,b,c){
   
   }
 
+//////////////////////////////////////////////////////
 
-  'use strict'
 /**
  * 
  * @param {arr} arr is array of numbers 
@@ -61,7 +65,7 @@ function sum(arr){
   return sum;
 }
 
-'use strict'
+///////////////////////////////////////////////////
 
 function isVowel(a){
   if (( a === 'a') || ( a === 'e') ||( a === 'i') ||( a === 'o') ||( a === 'u') ){

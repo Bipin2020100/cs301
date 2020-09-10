@@ -1,4 +1,9 @@
-'use strict';
+"use strict";
+/**
+ * 
+ * @param {arr} is array of numbers 
+ * @output is string
+ */
 
 function reverseArray(arr) {
   let output = "";
