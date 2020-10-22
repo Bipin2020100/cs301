@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./style.css" rel="stylesheet"/>
+    <script src="finalLibrary.js"></script>
+    <script src="actions.js"></script>
+</head>
+<body>
+    <div id="main">
+        <h1>Welcome to the Library</h1>
+        <label>Please enter your name:</label> 
+        <input type="text" id="student_name"/>
+        <button onclick="pullStudent()">Student Info</button>
+        <button onclick="resetTable()">Reset Table </button>
+        <span id="info">Enter your name and click Pull Info button</span><br/>
+        <button onclick="addBook(event)" value="Automic Habits"><img src="./images/Capture.PNG" width="200" height="300"/></button>
+        <button onclick="addBook(event)" value="365 ways to increase your frequency"><img src="./images/Capture1.PNG" width="200" height="300"/></button>
+        <button onclick="addBook(event)" value="The power of now"><img src="./images/Capture2.PNG" width="200" height="300"></button>
+        <button onclick="addBook(event)" value="The Art of Happiness"><img src="./images/Capture3.PNG" width="200" height="300"/></button>
+        <button onclick="addBook(event)" value="The Subtle Art Of Not Giving A F*ck"><img src="./images/Capture4.PNG" width="200" height="300"/></button>
+        <button onclick="addBook(event)" value="The Alchemist"><img src="./images/Capture5.PNG" width="200" height="300"></button>
+        
+        <table id="library_cart">
+            <caption>Books cart</caption>
+            <tr><th>Title</th><th>Due Date</th></tr>
+        </table>
+
+        <br/><br/><button id="btn-borrow" onclick="borrow()">Borrow</button>
+        <button id="btn-return" onclick="returnBook()">Return</button>
+    </div>
+</body>
+</html>

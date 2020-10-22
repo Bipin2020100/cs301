@@ -1,4 +1,6 @@
 
+/*eslint-disable*/
+
 var log = console.log; //shortcut for console.log
 if (typeof alert === "undefined") var alert = console.log; //this will log in node and alert in browser
 if (typeof prompt === "undefined") var prompt = require("prompt-sync")();
@@ -24,11 +26,16 @@ if (typeof prompt === "undefined") var prompt = require("prompt-sync")();
 //   },
 
 // };
-// let abc =user.loginOk
-// askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
-// askPassword(function(){user.loginOk()}, function(){user.loginFail()});
-// askPassword(function(){(user.loginOk.call(user))},function(){user.loginFail.call(user)});
+//  let abc =user.loginOk
+//askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
+//  askPassword(function(){user.loginOk}, function(){user.loginFail()});
+//  askPassword(function(){(user.loginOk.call(user))},function(){user.loginFail.call(user)});
 // askPassword(function(){(user.loginOk.apply(user))},function(){user.loginFail.apply(user)});
+// askPassword.apply(user, [user.loginOk.bind(user), user.loginFail.bind(user)]);
+// askPassword.call(user, user.loginOk.bind(user), user.loginFail.bind(user));
+// // OR
+// askPassword(() => user.loginOk.call(user), () => user.loginFail.call(user));
+
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -47,8 +54,8 @@ if (typeof prompt === "undefined") var prompt = require("prompt-sync")();
 //     alert( this.name + (result ? ' logged in' : ' failed to log in'));
 //   }
 // };
-
 // askPassword(user.login.bind(user, true),user.login.bind(user,false));
+// askPassword(function(){user.login(true)},function(){user.login(false)});
 
 ///////////////////////////////////////////////////////////////////
 
@@ -58,21 +65,44 @@ if (typeof prompt === "undefined") var prompt = require("prompt-sync")();
 //  title: "Our Group",
 //  students: ["John", "Pete", "Alice"],
 //  showList() {
-//  this.students.forEach(function(student) {
+//  this.students.forEach((student) =>{
 //  // Error: Cannot read property 'title' of undefined
 //  alert(this.title + ': ' + student)
 //  });
 //  }
 // };
-// group.showList.call(group.showList.bind(group));
+
+//  group.showList();
 
 /////////////////////////////////////////////////////////////////////
 
+// let user = {
+//   firstName: "John",
+//   sayHi() {
+//   alert(`Hello, ${this.firstName}!`);
+//   }
+//   };
+//   setTimeout(()=>user.sayHi(), 1000); // Hello, undefined!
+  
+///////////////////////////////////////////////////////////////////////
 
 
-
-
-
+class User {
+  constructor(name = "Anonymous") {
+      this.name = name;
+  }
+  sayHi() {
+      console.log(`Hello, ${this.name}!`);
+  }
+}
+fred = new User();
+console.log(fred);
+console.log(fred.__proto__);
+console.log(User.prototype);
+fred.sayHi();
+bob = new User("Bob");
+console.log(bob);
+bob.sayHi();
 
 
 
