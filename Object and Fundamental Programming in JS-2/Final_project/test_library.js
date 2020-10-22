@@ -54,7 +54,7 @@ class Book{
 
 class Library{
     constructor(Books,Members){
-        this.Books=Books
+        this.Books=Books;
         this.Members=Members;
     }
 
