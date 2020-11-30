@@ -60,14 +60,40 @@ if (typeof prompt === "undefined") var prompt = require("prompt-sync")(); //this
 // let bb = squu(4);
 // log(bb)
 
-function Dog(name){
-  this.name = name;
-    this.walk = function(){
-      alert(this.name + ' is walking . . ');
-    }
-    return 1
-}
+// function Dog(name){
+//   this.name = name;
+//     this.walk = function(){
+//       alert(this.name + ' is walking . . ');
+//     }
+//     return 1
+// }
 
-let myDog =  Dog('Candy');
- console.log(myDog);
- myDog.walk();
+// let myDog =  Dog('Candy');
+//  console.log(myDog);
+//  myDog.walk();
+
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(arr, target) {
+  let sum;
+  for (let i = 0; i < arr.length ; i++){
+      for (let j = 0; j < arr.length ; j++){
+          sum = arr[i] + arr[j];
+              if (sum === target){
+                  return [i, j];
+                  
+    
+              }
+          }
+      }
+  }
+  
+
+
+let a = [ 1,2,3,4]
+let b = 7
+
+log(twoSum(a,b))
