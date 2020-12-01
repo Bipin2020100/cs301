@@ -1,0 +1,24 @@
+{
+  "name": "homework-4",
+  "version": "1.0.0",
+  "description": "Create an application `app.ts` which will import the following three modules:\r ## Module 01 - module01.ts\r Complete the code for `isWeekend()` function and return the string \"weekend\" or \"weekday\" without using if-statement/ternary.\r ```typescript\r export function isWeekend(): boolean { \r \tconst todayDate: Date = new Date(); \r \tconst day: number = todayDate.getDay(); // 0 – 6 (0 is Sunday)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "webpack ./js/app.js -o ./js/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maharishi-university/homework-04---javascript-01-Bipin2020100.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maharishi-university/homework-04---javascript-01-Bipin2020100/issues"
+  },
+  "homepage": "https://github.com/maharishi-university/homework-04---javascript-01-Bipin2020100#readme",
+  "devDependencies": {
+    "webpack": "^5.9.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
